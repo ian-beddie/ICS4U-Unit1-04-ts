@@ -9,15 +9,14 @@
 import { createPrompt } from 'bun-promptx'
 
 //  declare variables
-const whilePlaceHolder = 1
 let loopCounter = 1
 let correctNumber = 0
 let userGuess = 0
 
 correctNumber = Math.floor(Math.random() * 6) + 1
 
-while (whilePlaceHolder === 1) {
-  const userGuessString = createPrompt('Guess a number between 1 and 6:')
+while (true) {
+  const userGuessString = createPrompt('Guess a number between 1 and 6: ')
   if (isNaN(parseInt(userGuessString.value))) {
     console.log('You did not enter a number.')
   } else {
